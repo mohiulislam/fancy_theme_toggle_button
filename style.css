@@ -153,6 +153,11 @@ body {
   position: relative;
   border: #ffd700 2px solid;
   border-radius: 99999px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 1.2%;
+  padding-left: 8%;
+  align-items: center;
 }
 
 #stars .star {
@@ -168,16 +173,45 @@ body {
 }
 
 #stars .star:nth-child(1) {
-  height: 10%;
-  aspect-ratio: 1;
-  border-radius: 100%;
-  overflow: hidden;
-  background-color: inherit;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  transform: scale(0.6);
+  margin-bottom: 10%;
 }
-
+#stars .star:nth-child(2) {
+  transform: scale(0.5);
+  margin-bottom: -15%;
+}
+#stars .star:nth-child(3) {
+  transform: scale(0.3);
+  margin-bottom: -1%;
+}
+#stars .star:nth-child(4) {
+  transform: scale(1.2);
+  margin-bottom: 20%;
+}
+#stars .star:nth-child(5) {
+  transform: scale(0.6);
+  margin-bottom: 8%;
+  margin-left: 3%;
+}
+#stars .star:nth-child(6) {
+  transform: scale(0.6);
+  margin-bottom: -17%;
+  margin-left: -3%;
+}
+#stars .star:nth-child(7) {
+  transform: scale(0.3);
+  margin-bottom: -2%;
+}
+#stars .star:nth-child(8) {
+  transform: scale(1.4);
+  margin-bottom: -19%;
+  margin-left: 2%;
+}
+#stars .star:nth-child(9) {
+  transform: scale(0.8);
+  margin-bottom: 3%;
+  margin-left: -2%;
+}
 
 #stars .star .ray {
   background-color: inherit;
@@ -189,7 +223,7 @@ body {
 
 #stars .star .base {
   background-color: white;
-  height: 98%;
+  height: 95%;
   aspect-ratio: 1;
   border-radius: 100%;
   position: absolute;
