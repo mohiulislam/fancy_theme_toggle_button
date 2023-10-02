@@ -1,0 +1,209 @@
+.sun_shadow {
+  box-shadow: inset 0px 7px 10px rgb(255, 247, 216),
+    inset 0px -7px 10px rgb(180, 175, 160), 0px 7px 15px rgb(87, 86, 86);
+}
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #000;
+  height: 100vh;
+  padding-top: 1rem;
+}
+.sky {
+  background-color: #357bb3;
+  height: 230.621px;
+  width: 586.89px;
+  border-radius: 9999px;
+  position: relative;
+  /* overflow: hidden; */
+}
+
+.sun_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  aspect-ratio: 1;
+}
+#sun {
+  background-color: #ffd700;
+  height: 83%;
+  aspect-ratio: 1;
+  border-radius: 9999px;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+  position: absolute;
+  z-index: 50;
+  box-shadow: inset 0px 7px 10px rgb(255, 247, 216),
+    inset 0px -7px 10px rgb(180, 175, 160), 0px 7px 15px rgb(87, 86, 86);
+}
+
+.sun_wrapper .ray {
+  background-color: #fff;
+  height: 260%;
+  aspect-ratio: 1;
+  border-radius: 9999px;
+  position: absolute;
+  opacity: 0.1;
+}
+.ray:nth-child(1) {
+  height: 200%;
+}
+.ray:nth-child(2) {
+  height: 140%;
+}
+
+.cloud_wrapper {
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.cloud_wrapper:nth-of-type(2) {
+  transform: translateY(-5%) translateX(-5.5%);
+  opacity: 0.6;
+}
+
+.cloud {
+  background-color: rgb(243, 253, 255);
+  height: 55%;
+  aspect-ratio: 1;
+  border-radius: 9999px;
+  display: inline-block;
+  position: absolute;
+}
+
+.cloud_wrapper:nth-of-type(2) .cloud:nth-child(1) {
+  margin-left: 77%;
+  margin-bottom: 16%;
+  height: 81%;
+}
+.cloud_wrapper:nth-of-type(2) .cloud:nth-child(2) {
+  margin-left: 81%;
+  margin-bottom: 1%;
+}
+.cloud_wrapper:nth-of-type(2) .cloud:nth-child(3) {
+  margin-left: 66%;
+  margin-bottom: -4%;
+}
+.cloud_wrapper:nth-of-type(2) .cloud:nth-child(4) {
+  margin-left: 57%;
+  margin-bottom: -9%;
+}
+.cloud_wrapper:nth-of-type(2) .cloud:nth-child(5) {
+  margin-left: 46%;
+  margin-bottom: -9.5%;
+}
+.cloud_wrapper:nth-of-type(2) .cloud:nth-child(6) {
+  margin-left: 33%;
+  margin-bottom: -14.5%;
+}
+.cloud_wrapper:nth-of-type(2) .cloud:nth-child(7) {
+  margin-left: 23%;
+  margin-bottom: -16%;
+}
+.cloud_wrapper:nth-of-type(2) .cloud:nth-child(8) {
+  margin-left: 7%;
+  margin-bottom: -14%;
+}
+
+.cloud_wrapper:nth-of-type(3) .cloud:nth-child(1) {
+  margin-left: 84%;
+  margin-bottom: 15%;
+  height: 81%;
+}
+.cloud_wrapper:nth-of-type(3) .cloud:nth-child(2) {
+  margin-left: 84%;
+  margin-bottom: -2%;
+}
+.cloud_wrapper:nth-of-type(3) .cloud:nth-child(3) {
+  margin-left: 67%;
+  margin-bottom: -9.5%;
+}
+.cloud_wrapper:nth-of-type(3) .cloud:nth-child(4) {
+  margin-left: 58%;
+  margin-bottom: -15%;
+}
+.cloud_wrapper:nth-of-type(3) .cloud:nth-child(5) {
+  margin-left: 46%;
+  margin-bottom: -11%;
+}
+.cloud_wrapper:nth-of-type(3) .cloud:nth-child(6) {
+  margin-left: 33%;
+  margin-bottom: -14%;
+}
+.cloud_wrapper:nth-of-type(3) .cloud:nth-child(7) {
+  margin-left: 21%;
+  margin-bottom: -16%;
+}
+.cloud_wrapper:nth-of-type(3) .cloud:nth-child(8) {
+  margin-left: 5%;
+  margin-bottom: -14%;
+}
+
+#stars {
+  width: 100%;
+  height: 100%;
+  background: #2f92e4;
+  margin-top: 100px;
+  position: relative;
+  border: #ffd700 2px solid;
+  border-radius: 99999px;
+}
+
+#stars .star {
+  position: relative;
+  height: 10%;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  overflow: hidden;
+  background-color: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#stars .star:nth-child(1) {
+  height: 10%;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  overflow: hidden;
+  background-color: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#stars .star .ray {
+  background-color: inherit;
+  height: 100%;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  position: absolute;
+}
+
+#stars .star .base {
+  background-color: white;
+  height: 98%;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  position: absolute;
+}
+
+#stars .star .ray:nth-child(2) {
+  transform: translateX(70%);
+}
+#stars .star .ray:nth-child(3) {
+  transform: translateX(-70%);
+}
+#stars .star .ray:nth-child(4) {
+  transform: translateY(70%);
+}
+#stars .star .ray:nth-child(5) {
+  transform: translateY(-70%);
+}
