@@ -15,7 +15,7 @@ body {
   width: 586.89px;
   border-radius: 9999px;
   position: relative;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .sun_wrapper {
@@ -24,7 +24,10 @@ body {
   align-items: center;
   height: 100%;
   aspect-ratio: 1;
+  position: relative;
+  z-index: 10;
 }
+
 #sun {
   background-color: #ffd700;
   height: 83%;
@@ -33,8 +36,8 @@ body {
   box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
   position: absolute;
   z-index: 50;
-  box-shadow: inset 0px 7px 10px rgb(255, 247, 216),
-    inset 0px -7px 10px rgb(180, 175, 160), 0px 7px 15px rgb(87, 86, 86);
+  box-shadow: 3px 4px 4px 0px rgba(254, 255, 239, 0.61) inset,
+    0px -5px 4px 0px #ba9b2e inset;
 }
 
 .sun_wrapper .ray {
@@ -51,6 +54,41 @@ body {
 .ray:nth-child(2) {
   height: 140%;
 }
+#moon {
+  background-color: rgb(195, 201, 209);
+  height: 100%;
+  aspect-ratio: 1;
+  border-radius: 9999px;
+  z-index: -11;
+  position: relative;
+  background-color: rgb(195, 201, 209);
+  box-shadow: 3px 4px 4px 0px rgba(255, 255, 255, 0.61) inset,
+    0px -5px 4px 0px #969696 inset;
+}
+
+#moon .spot {
+  background: rgb(148, 158, 178);
+  height: 10%;
+  aspect-ratio: 1;
+  border-radius: 99999px;
+  position: absolute;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+#moon .spot:nth-child(1) {
+  top: 40%;
+  left: 17%;
+  height: 37%;
+}
+#moon .spot:nth-child(2) {
+  top: 20%;
+  left: 45%;
+  height: 13%;
+}
+#moon .spot:nth-child(3) {
+  top: 50%;
+  left: 64%;
+  height: 22%;
+}
 
 .cloud_wrapper {
   background-color: transparent;
@@ -61,6 +99,7 @@ body {
   width: 100%;
   display: flex;
   align-items: flex-end;
+  z-index: 10;
 }
 
 .cloud_wrapper:nth-of-type(2) {
@@ -148,16 +187,15 @@ body {
 #stars {
   width: 100%;
   height: 100%;
-  background: #2f92e4;
-  margin-top: 100px;
-  position: relative;
-  border: #ffd700 2px solid;
+  background-color: inherit;
+  position: absolute;
   border-radius: 99999px;
   display: flex;
   justify-content: flex-start;
   gap: 1.2%;
   padding-left: 8%;
   align-items: center;
+  top: 0;
 }
 
 #stars .star {
@@ -240,4 +278,8 @@ body {
 }
 #stars .star .ray:nth-child(5) {
   transform: translateY(-70%);
+}
+
+input[type="checkbox"] {
+  display: none;
 }
