@@ -23,13 +23,11 @@ body {
   height: 100vh;
   padding-top: 1rem;
   align-items: center;
-  transition: all 1s ease-in-out;
-  flex-direction: column;
 }
 
 .sky {
   background-color: #357bb3;
-  height: 230px;
+  height: 350px;
   aspect-ratio: 2.542;
   border-radius: 9999px;
   position: relative;
@@ -330,16 +328,14 @@ input[type="checkbox"] {
   display: none;
 }
 
-#checkbox:checked + #info {
-  color: #ffffff;
+#checkbox:checked + #info + #viewport {
+  background: #00000077;
 }
 
-#checkbox:checked + #info + #viewport {
-  background: #000000;
-}
 #checkbox:checked + #info + #viewport .sky {
   background: #1c1f2c;
 }
+
 #checkbox:checked + #info + #viewport .sky .cloud_wrapper {
   translate: 0 130%;
 }
