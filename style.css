@@ -16,16 +16,31 @@ body {
   border-radius: 9999px;
   position: relative;
   overflow: hidden;
+  transition: all ease-in-out 1s;
 }
-
-.sun_wrapper {
+.sky::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 9999px;
+  box-shadow: 0px 11.13px 14.31px 0px rgba(0, 0, 0, 0.25) inset,
+    0px -1.59px 20.67px 0px rgba(0, 0, 0, 0.25) inset,
+    0px -4.77px 6.36px 0px rgba(0, 0, 0, 0.25);
+  z-index: 9999;
+}
+#sun_wrapper {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   height: 100%;
   aspect-ratio: 1;
   position: relative;
   z-index: 10;
+  margin-left: 0.45%;
+  transition: all ease-in-out 1s;
 }
 
 #sun {
@@ -35,12 +50,13 @@ body {
   border-radius: 9999px;
   box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
   position: absolute;
-  z-index: 50;
+  z-index: 20;
   box-shadow: 3px 4px 4px 0px rgba(254, 255, 239, 0.61) inset,
     0px -5px 4px 0px #ba9b2e inset;
+  overflow: hidden;
 }
 
-.sun_wrapper .ray {
+#sun_wrapper .ray {
   background-color: #fff;
   height: 260%;
   aspect-ratio: 1;
@@ -48,10 +64,10 @@ body {
   position: absolute;
   opacity: 0.1;
 }
-.ray:nth-child(1) {
-  height: 200%;
+#sun_wrapper .ray:nth-child(1) {
+  height: 198%;
 }
-.ray:nth-child(2) {
+#sun_wrapper .ray:nth-child(2) {
   height: 140%;
 }
 #moon {
@@ -64,6 +80,8 @@ body {
   background-color: rgb(195, 201, 209);
   box-shadow: 3px 4px 4px 0px rgba(255, 255, 255, 0.61) inset,
     0px -5px 4px 0px #969696 inset;
+  transform: translateX(100%);
+  transition: all ease-in-out 1s;
 }
 
 #moon .spot {
@@ -100,6 +118,7 @@ body {
   display: flex;
   align-items: flex-end;
   z-index: 10;
+  transition: all ease-in-out 1s;
 }
 
 .cloud_wrapper:nth-of-type(2) {
@@ -112,7 +131,6 @@ body {
   height: 55%;
   aspect-ratio: 1;
   border-radius: 9999px;
-  display: inline-block;
   position: absolute;
 }
 
@@ -196,6 +214,8 @@ body {
   padding-left: 8%;
   align-items: center;
   top: 0;
+  transform: translateY(-100%);
+  transition: transform ease-in-out 1s;
 }
 
 #stars .star {
@@ -282,4 +302,27 @@ body {
 
 input[type="checkbox"] {
   display: none;
+}
+
+#checkbox:checked + .sky {
+  background: #1c1f2c;
+}
+#checkbox:checked + .sky .cloud_wrapper {
+  translate: 0 130%;
+}
+
+#checkbox:checked + .sky .cloud_wrapper:nth-child(2) {
+  translate: 20% 130%;
+}
+
+#checkbox:checked + .sky #sun_wrapper {
+  transform: translateX(151.2%);
+}
+
+#checkbox:checked + .sky #moon {
+  transform: translateX(-0%);
+}
+
+#checkbox:checked + .sky #stars {
+  transform: unset;
 }
