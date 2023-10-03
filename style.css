@@ -3,13 +3,30 @@
     inset 0px -7px 10px rgb(180, 175, 160), 0px 7px 15px rgb(87, 86, 86);
 }
 body {
+  margin: auto;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+#info {
+  position: absolute;
+  left: 50%;
+  top: 5%;
+  transform: translate(-50%, -50%);
+  transition: color 1s ease-in-out;
+}
+
+#viewport {
   display: flex;
   justify-content: center;
-  background-color: #000;
+  background-color: #ffffff;
   height: 100vh;
   padding-top: 1rem;
   align-items: center;
+  transition: all 1s ease-in-out;
+  flex-direction: column;
 }
+
 .sky {
   background-color: #357bb3;
   height: 230px;
@@ -19,6 +36,7 @@ body {
   overflow: hidden;
   transition: all ease-in-out 1s;
 }
+
 .sky::before {
   content: "";
   position: absolute;
@@ -32,6 +50,7 @@ body {
     0px -4.77px 6.36px 0px rgba(0, 0, 0, 0.25);
   z-index: 9999;
 }
+
 #sun_wrapper {
   display: flex;
   align-items: center;
@@ -65,12 +84,15 @@ body {
   position: absolute;
   opacity: 0.1;
 }
+
 #sun_wrapper .ray:nth-child(1) {
   height: 198%;
 }
+
 #sun_wrapper .ray:nth-child(2) {
   height: 140%;
 }
+
 #moon {
   background-color: rgb(195, 201, 209);
   height: 100%;
@@ -93,16 +115,19 @@ body {
   position: absolute;
   box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25) inset;
 }
+
 #moon .spot:nth-child(1) {
   top: 40%;
   left: 17%;
   height: 37%;
 }
+
 #moon .spot:nth-child(2) {
   top: 20%;
   left: 45%;
   height: 13%;
 }
+
 #moon .spot:nth-child(3) {
   top: 50%;
   left: 64%;
@@ -126,7 +151,6 @@ body {
   transform: translateY(-5%) translateX(-5.5%);
   opacity: 0.6;
 }
-
 .cloud {
   background-color: rgb(243, 253, 255);
   height: 55%;
@@ -168,6 +192,7 @@ body {
   margin-left: 7%;
   margin-bottom: -14%;
 }
+
 
 .cloud_wrapper:nth-of-type(3) .cloud:nth-child(1) {
   margin-left: 84%;
@@ -305,25 +330,32 @@ input[type="checkbox"] {
   display: none;
 }
 
-#checkbox:checked + .sky {
+#checkbox:checked + #info {
+  color: #ffffff;
+}
+
+#checkbox:checked + #info + #viewport {
+  background: #000000;
+}
+#checkbox:checked + #info + #viewport .sky {
   background: #1c1f2c;
 }
-#checkbox:checked + .sky .cloud_wrapper {
+#checkbox:checked + #info + #viewport .sky .cloud_wrapper {
   translate: 0 130%;
 }
 
-#checkbox:checked + .sky .cloud_wrapper:nth-child(2) {
+#checkbox:checked + #info + #viewport .sky .cloud_wrapper:nth-child(2) {
   translate: 20% 130%;
 }
 
-#checkbox:checked + .sky #sun_wrapper {
-  transform: translateX(151.2%);
+#checkbox:checked + #info + #viewport .sky #sun_wrapper {
+  transform: translateX(152.1%);
 }
 
-#checkbox:checked + .sky #moon {
+#checkbox:checked + #info + #viewport .sky #moon {
   transform: translateX(-0%);
 }
 
-#checkbox:checked + .sky #stars {
+#checkbox:checked + #info + #viewport .sky #stars {
   transform: unset;
 }
