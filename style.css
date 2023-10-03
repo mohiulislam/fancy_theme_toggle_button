@@ -8,11 +8,12 @@ body {
   background-color: #000;
   height: 100vh;
   padding-top: 1rem;
+  align-items: center;
 }
 .sky {
   background-color: #357bb3;
-  height: 230.621px;
-  width: 586.89px;
+  height: 230px;
+  aspect-ratio: 2.542;
   border-radius: 9999px;
   position: relative;
   overflow: hidden;
