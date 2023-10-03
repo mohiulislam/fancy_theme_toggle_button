@@ -23,6 +23,7 @@ body {
   height: 100vh;
   padding-top: 1rem;
   align-items: center;
+  transition: all 1s ease-in-out;
 }
 
 .sky {
@@ -191,7 +192,6 @@ body {
   margin-bottom: -14%;
 }
 
-
 .cloud_wrapper:nth-of-type(3) .cloud:nth-child(1) {
   margin-left: 84%;
   margin-bottom: 15%;
@@ -328,30 +328,30 @@ input[type="checkbox"] {
   display: none;
 }
 
-#checkbox:checked + #info + #viewport {
+#checkbox:checked + #viewport {
   background: #00000077;
 }
 
-#checkbox:checked + #info + #viewport .sky {
+#checkbox:checked + #viewport .sky {
   background: #1c1f2c;
 }
 
-#checkbox:checked + #info + #viewport .sky .cloud_wrapper {
+#checkbox:checked + #viewport .sky .cloud_wrapper {
   translate: 0 130%;
 }
 
-#checkbox:checked + #info + #viewport .sky .cloud_wrapper:nth-child(2) {
+#checkbox:checked + #viewport .sky .cloud_wrapper:nth-child(2) {
   translate: 20% 130%;
 }
 
-#checkbox:checked + #info + #viewport .sky #sun_wrapper {
+#checkbox:checked + #viewport .sky #sun_wrapper {
   transform: translateX(152.1%);
 }
 
-#checkbox:checked + #info + #viewport .sky #moon {
+#checkbox:checked + #viewport .sky #moon {
   transform: translateX(-0%);
 }
 
-#checkbox:checked + #info + #viewport .sky #stars {
+#checkbox:checked + #viewport .sky #stars {
   transform: unset;
 }
